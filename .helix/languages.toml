@@ -1,0 +1,7 @@
+[[language]]
+name = "typescript"
+file-types = ["ts", "tsx"]
+language-server = { command = "deno", args = ["lsp"] }
+auto-format = true
+roots = ["velociraptor.ts"]
+config = { enable = true, lint = true, config = "./deno.json", importMap = "./import_map.json"  }

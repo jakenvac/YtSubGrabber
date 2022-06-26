@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+  "name": "youtube sub exporter",
+  "version": "1.0",
+  "description": "exports your youtube subs to the takeout csv format",
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.youtube.com/feed/channels*"
+      ],
+      "js": [
+        "./dist/content.js"
+      ]
+    }
+  ],
+  "background": {
+    "scripts": [
+      "./dist/background.js"
+    ]
+  },
+  "permissions": [
+    "downloads"
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "imports": {
+    "@/": "./src/",
+    "tryify": "https://deno.land/x/tryify@1.0.3/mod.ts",
+    "esbuild": "https://deno.land/x/esbuild@v0.14.47/mod.js"
+  }
+}
