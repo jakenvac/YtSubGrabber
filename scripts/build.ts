@@ -1,18 +1,23 @@
+import * as fs from "fs";
 import * as esbuild from "esbuild";
+import { tryifyAsync as ta } from "tryify";
 
-const backgroundPath = "./src/background.ts";
-const contentPath = "./src/content.ts";
+const runBuild = async () => {
+  const outdir = "./build/";
 
-const backgroundOutput = "./dist/background.js";
-const contentOutput = "./dist/content.js";
+  await ta(Deno.remove)(outdir);
+  await fs.copy("./static/", outdir);
 
-await esbuild.build({
-  outfile: backgroundOutput,
-  entryPoints: [backgroundPath],
-});
-console.log("built background.ts");
-await esbuild.build({
-  outfile: contentOutput,
-  entryPoints: [contentPath],
-});
-console.log("built content.ts");
+  const entryPoints = ["./src/background.ts", "./src/content.ts"];
+
+  console.log(`Building ${entryPoints.join(", ")}...`);
+  await esbuild.build({
+    entryPoints,
+    outdir,
+  });
+
+  console.log(`Done building to ${outdir}`);
+  esbuild.stop();
+};
+
+runBuild();
