@@ -1,4 +1,6 @@
+.DS_Store
 dist
 build
 run.sh
+YtSubGrabber.zip
 exec.sh

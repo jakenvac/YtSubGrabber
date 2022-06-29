@@ -5,5 +5,9 @@
       "deno.ns",
       "esnext"
     ],
+    "types": [
+      "./types/window.d.ts",
+      "https://denopkg.com/DefinitelyTyped/DefinitelyTyped@master/types/firefox-webext-browser/index.d.ts"
+    ]
   }
 }

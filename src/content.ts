@@ -1,4 +1,3 @@
-/// <reference types="./types.d.ts" />
 import channelInfo from "./channelInfo.ts";
 
 class SubExporter {
@@ -93,7 +92,6 @@ class SubExporter {
     await onChangePromise;
     this.scrollToBottom();
     const subs = this.getSubData();
-    alert(subs);
     await browser.runtime.sendMessage({ type: "ytMessage", channelInfo: subs });
   };
 
@@ -131,7 +129,6 @@ class SubExporter {
   constructor() {
     if (this.isSubscriptionPage) this.onSubscriptionPageLoaded();
     globalThis.addEventListener("popstate", () => {
-      console.log(globalThis.location.href);
       if (this.isSubscriptionPage) {
         this.onSubscriptionPageLoaded();
       } else {

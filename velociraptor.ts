@@ -17,6 +17,7 @@ const scriptConfig: ScriptsConfiguration = {
       watch: ["./src/content.ts", "./src/background.ts"],
     },
     cache: "deno cache ./scripts/build.ts ./src/content.ts ./src/background.ts",
+    dist: "./scripts/zip.sh",
   },
 };
 
