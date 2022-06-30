@@ -9,7 +9,7 @@
   "content_scripts": [
     {
       "matches": [
-        "*://*.youtube.com/"
+        "*://*.youtube.com/*"
       ],
       "js": [
         "./content.js"
