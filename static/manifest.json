@@ -3,9 +3,9 @@
   "name": "SubGrabber for youtube",
   "version": "1.0",
   "description": "exports your youtube subs to the takeout csv format",
-  "icons": [
+  "icons": {
     "48": "icon.png"
-  ],
+  },
   "content_scripts": [
     {
       "matches": [
