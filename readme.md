@@ -33,7 +33,7 @@ it obviously doesn't work.
 After clicking the button, the page will begin to auto-scroll to the bottom to make sure that all
 of your subscriptions have been loaded, so be patient. It will then download a CSV file with your subscriptions.
 
-## Devloping
+## Developing
 I used [Deno](https://deno.land/), 
 [esbuild](https://esbuild.github.io/) 
 & [Velociraptor](https://velociraptor.run/) to facilitate building the extension with typescript.  
